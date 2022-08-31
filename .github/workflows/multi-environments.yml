@@ -36,10 +36,13 @@ jobs:
     environment: 
       name: Staging
       url: 'http://test.myapp.com'
+    outputs:
+      output1: ${{ steps.step1.outputs.TAG_VERSION }}
     steps:
       - name: Deploy
         run: echo I am deploying!
-      - name: set output
+      - id: step1
+        name: set output
         run: echo '::set-output name=TAG_VERSION::1.0.0'
 
   DeployProd:
