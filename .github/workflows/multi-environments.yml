@@ -54,4 +54,4 @@ jobs:
       url: 'http://www.myapp.com'
     steps:
       - name: Deploy
-        run: echo I am deploying with tag version ${{ needs.DeployStaging.outputs.TAG_VERSION }}!
+        run: echo I am deploying with tag version ${{ needs.DeployStaging.outputs.TAG_VERSION }}!!
