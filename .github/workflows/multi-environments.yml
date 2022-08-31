@@ -37,7 +37,7 @@ jobs:
       name: Staging
       url: 'http://test.myapp.com'
     outputs:
-      output1: ${{ steps.step1.outputs.TAG_VERSION }}
+      TAG_VERSION: ${{ steps.step1.outputs.TAG_VERSION }}
     steps:
       - name: Deploy
         run: echo I am deploying!
